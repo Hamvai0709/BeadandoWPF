@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeadandoWPF"
         mc:Ignorable="d"
-        Title="BeadandoWPF" Height="450" Width="800">
+        Title="BeadandoWPF - Hamvai Soma" Height="450" Width="800">
     <Grid>
         <Canvas x:Name="Vaszon" MouseMove="Canvas_MouseMove" MouseLeftButtonDown="Vaszon_MouseLeftButtonDown" MouseLeftButtonUp="Vaszon_MouseLeftButtonUp" Background="White" HorizontalAlignment="Center" Width="800" Margin="0,30,0,0"/>
 
@@ -30,11 +30,7 @@
                     <RadioButton Checked="FeherClick" Content="Fehér" HorizontalAlignment="Left" Margin="34,0,0,0"/>
                     <RadioButton Checked="FeketeClick" Content="Fekete" HorizontalAlignment="Left" Margin="34,0,0,0"/>
                 </MenuItem>
-
-
             </Menu>
         </StackPanel>
-
-
     </Grid>
 </Window>
