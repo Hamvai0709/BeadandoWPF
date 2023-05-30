@@ -5,19 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeadandoWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="BeadandoWPF" Height="450" Width="800">
     <Grid>
-        <Canvas Margin="0,24,0,0"/>
-        <Menu>
-            <MenuItem Header="_Menü">
-                <MenuItem Header="_Szín" >
-                    <RadioButton Content="Red" HorizontalAlignment="Left" Margin="34,0,0,0"/>
-                    <RadioButton Content="Green" HorizontalAlignment="Left" Margin="34,0,0,0"/>
-                    <RadioButton Content="Blue" HorizontalAlignment="Left" Margin="34,0,0,0"/>
-                </MenuItem>
-                <Separator />
-                <MenuItem Header="_Kilépés" Click="kilepClick"/>
-            </MenuItem>
-        </Menu>
+        <Border BorderThickness="2" BorderBrush="Black" Margin="130,24,22,25">
+            <Canvas x:Name="Vaszon" Margin="130,24,22,25" MouseMove="Canvas_MouseMove" MouseLeftButtonDown="Vaszon_MouseLeftButtonDown" MouseLeftButtonUp="Vaszon_MouseLeftButtonUp" Background="White"/>
+        </Border>
+
+        <StackPanel>
+            <RadioButton  Checked="PirosClick" Content="Piros" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+            <RadioButton  Checked="ZoldClick" Content="Zöld" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+            <RadioButton  Checked="KekClick" Content="Kék" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+        </StackPanel>
+
+        <StackPanel Margin="0,100,0,0">
+            <RadioButton  Checked="VekonyClick" Content="Vékony" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+            <RadioButton  Checked="KozepesClick" Content="Közepes" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+            <RadioButton  Checked="VastagClick" Content="Vastag" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+        </StackPanel>
+
+
+
     </Grid>
 </Window>
