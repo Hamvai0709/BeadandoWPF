@@ -37,7 +37,7 @@ namespace BeadandoWPF
             InitializeComponent();
         }
 
-        private void kilepClick(object sender, RoutedEventArgs e)
+        private void KilepClick(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Biztosan ki akar lépni?", "Megerősítés", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
             if (result == MessageBoxResult.Yes)

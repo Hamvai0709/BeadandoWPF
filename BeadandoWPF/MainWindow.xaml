@@ -21,9 +21,12 @@
             <RadioButton  Checked="VekonyClick" Content="Vékony" HorizontalAlignment="Left" Margin="34,0,0,0"/>
             <RadioButton  Checked="KozepesClick" Content="Közepes" HorizontalAlignment="Left" Margin="34,0,0,0"/>
             <RadioButton  Checked="VastagClick" Content="Vastag" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+
         </StackPanel>
 
-
+        <StackPanel>
+            <Button Content="Kilépés" Click="KilepClick" Height="20" Width="100" Margin="10,200,0,0" HorizontalAlignment="Left"/>
+        </StackPanel>
 
     </Grid>
 </Window>
