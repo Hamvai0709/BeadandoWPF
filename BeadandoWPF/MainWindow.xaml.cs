@@ -20,14 +20,13 @@ namespace BeadandoWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private int Atmero = (int)Vastagsag.kozepes;
+        private int Atmero = (int)Vastagsag.vekony;
         private Brush Ecsetszin = Brushes.Black;
-        private bool ispaint = false;
-        private bool iserase = false;
+        private bool festes = false;
         private enum Vastagsag
         {
-            vekony=10,
-            kozepes=15,
+            vekony=5,
+            kozepes=10,
             vastag=30
 
         }
@@ -59,7 +58,10 @@ namespace BeadandoWPF
 
         private void PirosClick(object sender, RoutedEventArgs e)
         {
-            Ecsetszin = Brushes.Red;
+            if (true)
+            {
+                Ecsetszin = Brushes.Red;
+            }
         }
 
         private void ZoldClick(object sender, RoutedEventArgs e)
@@ -74,7 +76,10 @@ namespace BeadandoWPF
 
         private void VekonyClick(object sender, RoutedEventArgs e)
         {
-            Atmero = (int)Vastagsag.vekony;
+            if (true)
+            {
+                Atmero = (int)Vastagsag.vekony;
+            }
         }
 
         private void KozepesClick(object sender, RoutedEventArgs e)
@@ -89,21 +94,16 @@ namespace BeadandoWPF
 
         private void Vaszon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            ispaint = true;
+            festes = true;
         }
 
         private void Vaszon_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            ispaint = false;
+            festes = false;
         }
         private void Canvas_MouseMove(object sender, MouseEventArgs e)
         {
-            if (ispaint)
-            {
-                Point mouseposition = e.GetPosition(Vaszon);
-                ecset(Ecsetszin, mouseposition);
-            }
-            if (iserase)
+            if (festes)
             {
                 Point mouseposition = e.GetPosition(Vaszon);
                 ecset(Ecsetszin, mouseposition);
@@ -111,5 +111,19 @@ namespace BeadandoWPF
 
         }
 
+        private void FeherClick(object sender, RoutedEventArgs e)
+        {
+            Vaszon.Background= new SolidColorBrush(Colors.White);
+        }
+
+        private void FeketeClick(object sender, RoutedEventArgs e)
+        {
+            Vaszon.Background = new SolidColorBrush(Colors.Black);
+        }
+
+        private void UjClick(object sender, RoutedEventArgs e)
+        {
+            Vaszon.Children.Clear();
+        }
     }
 }

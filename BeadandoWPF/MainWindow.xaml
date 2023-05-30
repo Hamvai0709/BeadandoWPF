@@ -7,26 +7,34 @@
         mc:Ignorable="d"
         Title="BeadandoWPF" Height="450" Width="800">
     <Grid>
-        <Border BorderThickness="2" BorderBrush="Black" Margin="130,24,22,25">
-            <Canvas x:Name="Vaszon" Margin="130,24,22,25" MouseMove="Canvas_MouseMove" MouseLeftButtonDown="Vaszon_MouseLeftButtonDown" MouseLeftButtonUp="Vaszon_MouseLeftButtonUp" Background="White"/>
-        </Border>
+        <Canvas x:Name="Vaszon" MouseMove="Canvas_MouseMove" MouseLeftButtonDown="Vaszon_MouseLeftButtonDown" MouseLeftButtonUp="Vaszon_MouseLeftButtonUp" Background="White" HorizontalAlignment="Center" Width="800" Margin="0,30,0,0"/>
 
         <StackPanel>
-            <RadioButton  Checked="PirosClick" Content="Piros" HorizontalAlignment="Left" Margin="34,0,0,0"/>
-            <RadioButton  Checked="ZoldClick" Content="Zöld" HorizontalAlignment="Left" Margin="34,0,0,0"/>
-            <RadioButton  Checked="KekClick" Content="Kék" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+            <Menu>
+                <MenuItem Header="_Menü">
+                    <MenuItem Header="_Új" Click="UjClick"/>
+                    <Separator/>
+                    <MenuItem Header="_Kilépés" Click="KilepClick"/>
+                </MenuItem>
+                <MenuItem Header="Szín">
+                    <RadioButton Checked="PirosClick" Content="Piros" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+                    <RadioButton Checked="ZoldClick" Content="Zöld" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+                    <RadioButton Checked="KekClick" Content="Kék" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+                </MenuItem>
+                <MenuItem Header="Vastagság">
+                    <RadioButton  Checked="VekonyClick" Content="Vékony" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+                    <RadioButton  Checked="KozepesClick" Content="Közepes" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+                    <RadioButton  Checked="VastagClick" Content="Vastag" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+                </MenuItem>
+                <MenuItem Header="Háttér">
+                    <RadioButton Checked="FeherClick" Content="Fehér" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+                    <RadioButton Checked="FeketeClick" Content="Fekete" HorizontalAlignment="Left" Margin="34,0,0,0"/>
+                </MenuItem>
+
+
+            </Menu>
         </StackPanel>
 
-        <StackPanel Margin="0,100,0,0">
-            <RadioButton  Checked="VekonyClick" Content="Vékony" HorizontalAlignment="Left" Margin="34,0,0,0"/>
-            <RadioButton  Checked="KozepesClick" Content="Közepes" HorizontalAlignment="Left" Margin="34,0,0,0"/>
-            <RadioButton  Checked="VastagClick" Content="Vastag" HorizontalAlignment="Left" Margin="34,0,0,0"/>
-
-        </StackPanel>
-
-        <StackPanel>
-            <Button Content="Kilépés" Click="KilepClick" Height="20" Width="100" Margin="10,200,0,0" HorizontalAlignment="Left"/>
-        </StackPanel>
 
     </Grid>
 </Window>
